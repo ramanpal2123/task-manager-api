@@ -12,7 +12,7 @@ class User(AbstractUser):
         default='user'
     )
 
-    # Yeh 2 lines add karo — yahi fix hai
+   
     groups = models.ManyToManyField(
         'auth.Group',
         related_name='api_user_set',
