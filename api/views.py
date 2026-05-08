@@ -1,4 +1,4 @@
-# api/views.py
+
 from rest_framework import status, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import (
@@ -36,7 +36,7 @@ def login(request):
         return Response({
             'access': str(refresh.access_token),
             'refresh': str(refresh),
-            'role': user.role,        # ✅ Custom role field
+            'role': user.role,       
             'username': user.username
         })
     return Response(
